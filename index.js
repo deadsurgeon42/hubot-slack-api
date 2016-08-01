@@ -71,7 +71,7 @@ function generateApiCalls(calls, token, robot) {
         acc[group] = {};
       }
 
-      acc[group][v[1]] = function (args, callback) {
+      acc[group][v[2]] = function (args, callback) {
         var callName = v.join('.');
         var paramsNoTok = _.defaults(_.omit(args, "token"), {token: "[CENSORED]"});
         if (this.logger)
